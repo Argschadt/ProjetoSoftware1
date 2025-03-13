@@ -1,0 +1,1 @@
+Trabalho para a disciplina Projeto de Software I, site para o Jardim Botânico da UFSM, com QR Codes para plantas, animais e fungos presentes no jardim, cada qual com uma página descrevendo o ser vivo.
