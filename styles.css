@@ -40,6 +40,32 @@ header h1 {
 
 header p {
     font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Menu de navega‡Æo */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espa‡amento entre os itens */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
 }
 
 /* Conte£do principal */
@@ -110,4 +136,4 @@ footer {
 
 footer p {
     font-size: 0.9rem;
-}  
+}
