@@ -223,3 +223,85 @@ footer p {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Estilos para p gina de esp‚cie */
+.especie-detalhes {
+    padding: 30px 0;
+}
+
+.especie-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nome-cientifico {
+    font-style: italic;
+    color: #666;
+}
+
+.especie-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.especie-imagem {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.especie-info h3 {
+    color: #2E7D32;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.especie-info ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.especie-info li {
+    margin-bottom: 8px;
+}
+
+.qr-code {
+    margin-top: 30px;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.voltar-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.voltar-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .especie-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .especie-imagem {
+        margin-bottom: 20px;
+    }
+}
