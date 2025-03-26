@@ -1,4 +1,4 @@
-/* Reset b†sico */
+/* Reset b√°sico */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-    flex: 1; /* Faz o wrapper ocupar o espaáo restante */
+    flex: 1; /* Faz o wrapper ocupar o espa√ßo restante */
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
     margin: 0 auto;
 }
 
-/* Cabeáalho */
+/* Cabe√ßalho */
 header {
     background-color: #4CAF50;
     color: white;
@@ -34,8 +34,10 @@ header {
 }
 
 header h1 {
+    font-family: 'Quicksand', sans-serif;
     font-size: 3rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 header p {
@@ -43,12 +45,12 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Menu de navegaá∆o */
+/* Menu de navega√ß√£o */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaáamento entre os itens */
+    gap: 20px; /* Espa√ßamento entre os itens */
 }
 
 nav ul li {
@@ -68,7 +70,7 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
 }
 
-/* Conte£do principal */
+/* Conte√∫do principal */
 main {
     padding: 20px 0;
 }
@@ -82,9 +84,11 @@ main {
 }
 
 .intro h2 {
+    font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
     margin-bottom: 10px;
     color: #4CAF50;
+    font-weight: 600;
 }
 
 .intro p {
@@ -100,9 +104,11 @@ main {
 }
 
 .cta h2 {
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.8rem;
     margin-bottom: 10px;
     color: #2E7D32;
+    font-weight: 600;
 }
 
 .cta p {
@@ -125,7 +131,7 @@ main {
     background-color: #45a049;
 }
 
-/* RodapÇ */
+/* Rodap√© */
 footer {
     background-color: #333;
     color: white;
@@ -167,6 +173,8 @@ footer p {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    text-decoration: none;
+    color: #2E7D32;
 }
 
 .gallery-item:hover {
@@ -224,7 +232,7 @@ footer p {
     cursor: pointer;
 }
 
-/* Estilos para p†gina de espÇcie */
+/* Estilos para p√°gina de esp√©cie */
 .especie-detalhes {
     padding: 30px 0;
 }
@@ -303,5 +311,118 @@ footer p {
     
     .especie-imagem {
         margin-bottom: 20px;
+    }
+}
+
+/* Estilos para p√°gina Nossa Hist√≥ria */
+.historia-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historia-intro h2 {
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.historia-intro p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.historia-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historia-timeline {
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #4CAF50;
+}
+
+.timeline-item h3 {
+    color: #2E7D32;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.historia-missao {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+}
+
+.historia-missao h2 {
+    color: #2E7D32;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.historia-missao p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.historia-valores {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.historia-valores h2 {
+    color: #2E7D32;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.historia-valores ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.historia-valores li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.historia-valores li:before {
+    content: "‚Ä¢";
+    color: #4CAF50;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+@media (max-width: 768px) {
+    .historia-content {
+        padding: 20px;
+    }
+    
+    .historia-intro h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline-item h3 {
+        font-size: 1.3rem;
     }
 }
