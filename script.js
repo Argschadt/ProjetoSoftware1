@@ -47,10 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Função para mostrar o slide atual
         function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
+            // Primeiro, remove a classe active de todos os slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                // Garante que o slide anterior permaneça visível durante a transição
+                if (slide.style.opacity === '1') {
+                    slide.style.opacity = '0';
+                }
+            });
+            
+            // Remove a classe active de todos os dots
             dots.forEach(dot => dot.classList.remove('active'));
             
+            // Adiciona a classe active ao slide atual
             slides[index].classList.add('active');
+            // Garante que o slide atual fique visível
+            slides[index].style.opacity = '1';
+            
+            // Adiciona a classe active ao dot atual
             dots[index].classList.add('active');
         }
 
@@ -68,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Iniciar o carrossel automático
         function startSlideShow() {
-            slideInterval = setInterval(nextSlide, 5000); // Muda a cada 5 segundos
+            slideInterval = setInterval(nextSlide, 10000); // Muda a cada 10 segundos
         }
 
         // Parar o carrossel automático

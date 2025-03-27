@@ -696,12 +696,20 @@ body {
 }
 
 .slide {
-    display: none;
-    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    pointer-events: none;
 }
 
 .slide.active {
-    display: block;
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
 }
 
 .slide img {
