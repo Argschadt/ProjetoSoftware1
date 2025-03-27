@@ -3,74 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de espécies do Jardim Botânico - Explore nossa coleção de plantas e animais">
     <title>Galeria - Jardim Botânico</title>
+    
+    <!-- Preload de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="site-header">
             <div class="container">
-                <h1>Jardim Botânico</h1>
-                <p>Explore a natureza em seu esplendor</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="galeria.html" class="active">Galeria</a></li>
-                        <li><a href="nossa-historia.html">Nossa História</a></li>
+                <h1 class="site-title">Jardim Botânico</h1>
+                <p class="site-description">Explore a natureza em seu esplendor</p>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                        <li class="nav-item"><a href="galeria.html" class="nav-link active" aria-current="page">Galeria</a></li>
+                        <li class="nav-item"><a href="nossa-historia.html" class="nav-link">Nossa História</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <main class="container">
-            <section class="gallery-intro">
-                <h2>Galeria de Espécies</h2>
-                <p>Conheça as plantas e animais que habitam nosso jardim. Clique em qualquer imagem para ver detalhes.</p>
-            </section>
+        <main class="site-main">
+            <div class="container">
+                <section class="gallery-intro">
+                    <h2 class="section-title">Galeria de Espécies</h2>
+                    <p class="section-text">Conheça as plantas e animais que habitam nosso jardim. Clique em qualquer imagem para ver detalhes.</p>
+                </section>
 
-            <section class="gallery-grid">
-                <!-- Plantas -->
-                <div class="gallery-category">
-                    <h3>Plantas</h3>
+                <section class="gallery-category">
+                    <h3 class="category-title">Plantas</h3>
                     <div class="gallery-items">
-                        <a href="especie-orquidea.html" class="gallery-item">
-                            <img src="imagens/planta1.jpg" alt="Orquídea rara">
+                        <a href="especie-orquidea.html" class="gallery-item" aria-label="Ver detalhes da Orquídea rara">
+                            <img src="imagens/planta1.jpg" alt="Orquídea rara" loading="lazy">
                             <div class="caption">Orquídea rara</div>
                         </a>
-                        <a href="especie-palmeira.html" class="gallery-item">
-                            <img src="imagens/planta2.jfif" alt="Palmeira imperial">
+                        <a href="especie-palmeira.html" class="gallery-item" aria-label="Ver detalhes da Palmeira imperial">
+                            <img src="imagens/planta2.jfif" alt="Palmeira imperial" loading="lazy">
                             <div class="caption">Palmeira imperial</div>
                         </a>
-                        <a href="especie-goiabeira.html" class="gallery-item">
-                            <img src="imagens/goiabeira.jpg" alt="Goiabeira">
+                        <a href="especie-goiabeira.html" class="gallery-item" aria-label="Ver detalhes da Goiabeira">
+                            <img src="imagens/goiabeira.jpg" alt="Goiabeira" loading="lazy">
                             <div class="caption">Goiabeira</div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <!-- Animais -->
-                <div class="gallery-category">
-                    <h3>Animais</h3>
+                <section class="gallery-category">
+                    <h3 class="category-title">Animais</h3>
                     <div class="gallery-items">
-                        <a href="especie-beija-flor.html" class="gallery-item">
-                            <img src="imagens/animal1.jpg" alt="Beija-flor">
+                        <a href="especie-beija-flor.html" class="gallery-item" aria-label="Ver detalhes do Beija-flor">
+                            <img src="imagens/animal1.jpg" alt="Beija-flor" loading="lazy">
                             <div class="caption">Beija-flor</div>
                         </a>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
     </div>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>© 2025 Jardim Botânico. Todos os direitos reservados.</p>
+            <p class="footer-text">&copy; 2025 Jardim Botânico. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização ampliada da imagem">
+        <button class="close-btn" aria-label="Fechar visualização">&times;</button>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <p class="lightbox-description" id="lightbox-caption"></p>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

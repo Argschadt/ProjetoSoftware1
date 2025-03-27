@@ -3,53 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jardim Botânico - Um espaço dedicado à natureza e educação ambiental">
     <title>Jardim Botânico</title>
+    
+    <!-- Preload de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="site-header">
             <div class="container">
-                <h1>Jardim Botânico</h1>
-                <p>Explore a natureza em seu esplendor</p>
-                <!-- Menu de navegação -->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
-                        <li><a href="nossa-historia.html">Nossa História</a></li>
+                <h1 class="site-title">Jardim Botânico</h1>
+                <p class="site-description">Explore a natureza em seu esplendor</p>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Início</a></li>
+                        <li class="nav-item"><a href="galeria.html" class="nav-link">Galeria</a></li>
+                        <li class="nav-item"><a href="nossa-historia.html" class="nav-link">Nossa História</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <main class="container">
-            <section class="intro">
-                <h2>Bem-vindo(a) ao nosso jardim!</h2>
-                <p>
-                    Nosso jardim botânico é um lugar mágico onde você pode descobrir diversas espécies de plantas e animais.
-                    <br>
-                    Use seu celular para escanear os QR Codes espalhados pelo jardim e aprender mais sobre cada espécie.
-                </p>
-            </section>
+        <main class="site-main">
+            <div class="container">
+                <section class="intro-section">
+                    <h2 class="section-title">Bem-vindo(a) ao nosso jardim!</h2>
+                    <p class="section-text">
+                        Nosso jardim botânico é um lugar mágico onde você pode descobrir diversas espécies de plantas e animais.
+                        <br>
+                        Use seu celular para escanear os QR Codes espalhados pelo jardim e aprender mais sobre cada espécie.
+                    </p>
+                </section>
 
-            <section class="cta">
-                <h2>Comece sua jornada</h2>
-                <p>Escaneie um QR Code no jardim ou explore nossa galeria online.</p>
-                <button id="exploreButton">Explorar Galeria</button>
-            </section>
+                <section class="cta-section">
+                    <h2 class="section-title">Comece sua jornada</h2>
+                    <p class="section-text">Escaneie um QR Code no jardim ou explore nossa galeria online.</p>
+                    <button id="exploreButton" class="cta-button" aria-label="Explorar galeria">Explorar Galeria</button>
+                </section>
+            </div>
         </main>
     </div>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>© 2025 Jardim Botânico. Todos os direitos reservados.</p>
+            <p class="footer-text">&copy; 2025 Jardim Botânico. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

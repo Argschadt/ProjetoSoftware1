@@ -3,87 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história do Jardim Botânico - Uma jornada de dedicação à natureza e educação ambiental desde 1990">
     <title>Nossa História - Jardim Botânico</title>
+    
+    <!-- Preload de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="site-header">
             <div class="container">
-                <h1>Jardim Botânico</h1>
-                <p>Explore a natureza em seu esplendor</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
-                        <li><a href="nossa-historia.html" class="active">Nossa História</a></li>
+                <h1 class="site-title">Jardim Botânico</h1>
+                <p class="site-description">Explore a natureza em seu esplendor</p>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                        <li class="nav-item"><a href="galeria.html" class="nav-link">Galeria</a></li>
+                        <li class="nav-item"><a href="nossa-historia.html" class="nav-link active" aria-current="page">Nossa História</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <main class="container">
-            <section class="historia-intro">
-                <h2>Nossa História</h2>
-                <p>Uma jornada de dedicação à natureza e à educação ambiental desde 1990.</p>
-            </section>
+        <main class="site-main">
+            <div class="container">
+                <section class="historia-intro">
+                    <h2 class="section-title">Nossa História</h2>
+                    <p class="section-text">Uma jornada de dedicação à natureza e à educação ambiental desde 1990.</p>
+                </section>
 
-            <section class="historia-content">
-                <div class="historia-timeline">
-                    <div class="timeline-item">
-                        <h3>1990</h3>
-                        <p>Fundado com o objetivo de preservar e estudar a flora local, nosso jardim botânico começou como um pequeno projeto de conservação.</p>
+                <section class="historia-content">
+                    <div class="historia-timeline">
+                        <article class="timeline-item">
+                            <h3 class="timeline-year">1990</h3>
+                            <p class="timeline-text">Fundado com o objetivo de preservar e estudar a flora local, nosso jardim botânico começou como um pequeno projeto de conservação.</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <h3 class="timeline-year">1995</h3>
+                            <p class="timeline-text">Inauguração do primeiro centro de visitantes e implementação do programa de educação ambiental para escolas.</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <h3 class="timeline-year">2000</h3>
+                            <p class="timeline-text">Expansão do acervo com espécies raras e ameaçadas de extinção, tornando-se referência em conservação.</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <h3 class="timeline-year">2010</h3>
+                            <p class="timeline-text">Lançamento do projeto de digitalização com QR Codes, permitindo que visitantes aprendam mais sobre cada espécie.</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <h3 class="timeline-year">2020</h3>
+                            <p class="timeline-text">Início do projeto de sustentabilidade, com implementação de energia solar e sistema de captação de água da chuva.</p>
+                        </article>
                     </div>
 
-                    <div class="timeline-item">
-                        <h3>1995</h3>
-                        <p>Inauguração do primeiro centro de visitantes e implementação do programa de educação ambiental para escolas.</p>
+                    <div class="historia-missao">
+                        <h2 class="section-title">Nossa Missão</h2>
+                        <p class="section-text">Promover a conservação da biodiversidade, a educação ambiental e a pesquisa científica, criando um espaço onde natureza e conhecimento se encontram para inspirar futuras gerações.</p>
                     </div>
 
-                    <div class="timeline-item">
-                        <h3>2000</h3>
-                        <p>Expansão do acervo com espécies raras e ameaçadas de extinção, tornando-se referência em conservação.</p>
+                    <div class="historia-valores">
+                        <h2 class="section-title">Nossos Valores</h2>
+                        <ul class="valores-list">
+                            <li class="valor-item">Conservação da biodiversidade</li>
+                            <li class="valor-item">Educação ambiental</li>
+                            <li class="valor-item">Pesquisa científica</li>
+                            <li class="valor-item">Sustentabilidade</li>
+                            <li class="valor-item">Compromisso com a comunidade</li>
+                        </ul>
                     </div>
-
-                    <div class="timeline-item">
-                        <h3>2010</h3>
-                        <p>Lançamento do projeto de digitalização com QR Codes, permitindo que visitantes aprendam mais sobre cada espécie.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>2020</h3>
-                        <p>Início do projeto de sustentabilidade, com implementação de energia solar e sistema de captação de água da chuva.</p>
-                    </div>
-                </div>
-
-                <div class="historia-missao">
-                    <h2>Nossa Missão</h2>
-                    <p>Promover a conservação da biodiversidade, a educação ambiental e a pesquisa científica, criando um espaço onde natureza e conhecimento se encontram para inspirar futuras gerações.</p>
-                </div>
-
-                <div class="historia-valores">
-                    <h2>Nossos Valores</h2>
-                    <ul>
-                        <li>Conservação da biodiversidade</li>
-                        <li>Educação ambiental</li>
-                        <li>Pesquisa científica</li>
-                        <li>Sustentabilidade</li>
-                        <li>Compromisso com a comunidade</li>
-                    </ul>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
     </div>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>© 2025 Jardim Botânico. Todos os direitos reservados.</p>
+            <p class="footer-text">&copy; 2025 Jardim Botânico. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html> 
