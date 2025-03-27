@@ -33,18 +33,38 @@
         <main class="site-main">
             <div class="container">
                 <section class="intro-section">
-                    <h2 class="section-title">Bem-vindo(a) ao nosso jardim!</h2>
-                    <p class="section-text">
-                        Nosso jardim botânico é um lugar mágico onde você pode descobrir diversas espécies de plantas e animais.
-                        <br>
-                        Use seu celular para escanear os QR Codes espalhados pelo jardim e aprender mais sobre cada espécie.
-                    </p>
+                    <h2 class="section-title">Bem-vindo ao Jardim Botânico</h2>
+                    <p class="section-text">Um espaço dedicado à natureza, educação e pesquisa, onde cada visitante pode explorar a riqueza da biodiversidade brasileira.</p>
                 </section>
+
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="imagens/paisagem-1.jpg" alt="Vista panorâmica do Jardim Botânico" loading="lazy">
+                        <div class="slide-caption">Vista panorâmica do nosso jardim</div>
+                    </div>
+                    <div class="slide">
+                        <img src="imagens/paisagem-2.jpg" alt="Caminho entre árvores" loading="lazy">
+                        <div class="slide-caption">Caminhos que convidam à exploração</div>
+                    </div>
+                    <div class="slide">
+                        <img src="imagens/paisagem-3.jpg" alt="Área de conservação" loading="lazy">
+                        <div class="slide-caption">Áreas de conservação e pesquisa</div>
+                    </div>
+                    
+                    <button class="slide-prev" aria-label="Imagem anterior">❮</button>
+                    <button class="slide-next" aria-label="Próxima imagem">❯</button>
+                    
+                    <div class="slide-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
 
                 <section class="cta-section">
                     <h2 class="section-title">Comece sua jornada</h2>
-                    <p class="section-text">Escaneie um QR Code no jardim ou explore nossa galeria online.</p>
-                    <button id="exploreButton" class="cta-button" aria-label="Explorar galeria">Explorar Galeria</button>
+                    <p class="section-text">Explore nossa galeria de espécies e descubra a riqueza da biodiversidade que preservamos.</p>
+                    <a href="galeria.html" class="cta-button">Explorar Galeria</a>
                 </section>
             </div>
         </main>
