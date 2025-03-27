@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Iniciar o carrossel automático
         function startSlideShow() {
-            slideInterval = setInterval(nextSlide, 10000); // Muda a cada 10 segundos
+            slideInterval = setInterval(nextSlide, 8000); // Muda a cada 10 segundos
         }
 
         // Parar o carrossel automático
