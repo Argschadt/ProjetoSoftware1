@@ -52,6 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
 }
 
 /* Layout Base */
@@ -84,9 +85,10 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('imagens/pattern.svg') repeat;
-    opacity: 0.25;
+    background: url('imagens/leaf.svg') repeat;
+    opacity: 0.35;
     pointer-events: none;
+    color: var(--color-white);
 }
 
 .site-header .container {
