@@ -68,6 +68,3 @@ O site é totalmente responsivo e se adapta aos seguintes breakpoints:
 ## 📞 Contato
 
 Para mais informações sobre o projeto, entre em contato através do email: euqseimeunome@gmail.com
-
----
-Desenvolvido com ❤️ para o Jardim Botânico
