@@ -65,27 +65,9 @@ O site é totalmente responsivo e se adapta aos seguintes breakpoints:
 - Tablet: 768px
 - Mobile: < 768px
 
-## 🔒 Segurança
-
-- Todas as imagens são carregadas com atributo `loading="lazy"` para melhor performance
-- Links externos incluem atributos de segurança
-- Formulários (se implementados) incluem validação
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👥 Contribuição
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
 ## 📞 Contato
 
-Para mais informações sobre o projeto, entre em contato através do email: [seu-email@exemplo.com]
+Para mais informações sobre o projeto, entre em contato através do email: euqseimeunome@gmail.com
 
 ---
 Desenvolvido com ❤️ para o Jardim Botânico
