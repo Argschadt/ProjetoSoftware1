@@ -909,3 +909,34 @@ body {
         padding: var(--spacing-md);
     }
 }
+
+/* Estilos para página de Contato */
+.contato-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.contato-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.contato-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.contato-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contato-info {
+        grid-template-columns: 1fr;
+    }
+}
