@@ -126,6 +126,8 @@ body {
     display: inline-block;
     backdrop-filter: blur(5px);
     margin-top: var(--spacing-xs);
+    width: 100%;
+    max-width: 100%;
 }
 
 .nav-list {
@@ -133,6 +135,9 @@ body {
     display: flex;
     justify-content: center;
     gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-link {
@@ -246,13 +251,20 @@ body {
         padding: 0 var(--spacing-md);
     }
     
-    .nav-list {
-        gap: var(--spacing-sm);
+    .main-nav {
+        padding: var(--spacing-xs);
+        margin: var(--spacing-xs) 0;
     }
-    
+
+    .nav-list {
+        gap: var(--spacing-xs);
+        justify-content: center;
+    }
+
     .nav-link {
         padding: 6px 12px;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
     }
 
     .section-title {
