@@ -242,18 +242,24 @@ body {
         font-size: 14px;
     }
 
+    .site-header {
+        padding: var(--spacing-sm) 0;
+    }
+
     .site-title {
         font-size: 2.5rem;
+        margin-bottom: var(--spacing-xs);
     }
     
     .site-description {
         font-size: 1.1rem;
         padding: 0 var(--spacing-md);
+        margin-bottom: var(--spacing-xs);
     }
     
     .main-nav {
         padding: var(--spacing-xs);
-        margin: var(--spacing-xs) 0;
+        margin: 0;
     }
 
     .nav-list {
