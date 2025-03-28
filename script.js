@@ -1,37 +1,5 @@
 // script.js
 
-// Lightbox
-const galleryImages = document.querySelectorAll('.gallery-item img');
-if (galleryImages.length > 0) {
-    galleryImages.forEach(img => {
-        img.addEventListener('click', () => {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxDesc = document.getElementById('lightbox-desc');
-            
-            lightbox.style.display = 'block';
-            lightboxImg.src = img.src;
-            lightboxDesc.textContent = img.dataset.description;
-        });
-    });
-}
-
-// Fechar lightbox
-const closeBtn = document.querySelector('.close-btn');
-if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-        document.getElementById('lightbox').style.display = 'none';
-    });
-}
-
-// Fechar ao clicar fora da imagem
-window.addEventListener('click', (e) => {
-    const lightbox = document.getElementById('lightbox');
-    if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
-
 // Carrossel de Imagens
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
