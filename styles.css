@@ -946,3 +946,59 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Estilos para as novas seções da página Nossa História */
+.historia-equipe,
+.historia-conquistas {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.historia-equipe {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-white) 100%);
+}
+
+.historia-conquistas {
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-primary-light) 100%);
+}
+
+.historia-equipe .section-text,
+.historia-conquistas .section-text {
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.historia-conquistas .valores-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.historia-conquistas .valor-item {
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+}
+
+.historia-conquistas .valor-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+    .historia-equipe,
+    .historia-conquistas {
+        padding: var(--spacing-md);
+    }
+
+    .historia-conquistas .valores-list {
+        grid-template-columns: 1fr;
+    }
+}
