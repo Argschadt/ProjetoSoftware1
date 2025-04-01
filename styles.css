@@ -135,6 +135,24 @@ body {
     max-width: 800px;
 }
 
+.header-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    color: var(--color-white);
+    transition: var(--transition-fast);
+}
+
+.header-link:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.header-link:active {
+    transform: translateY(0);
+}
+
 /* Navegação */
 .main-nav {
     background-color: rgba(255, 255, 255, 0.1);
