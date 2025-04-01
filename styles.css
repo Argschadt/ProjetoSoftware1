@@ -75,7 +75,11 @@ body {
     color: var(--color-white);
     padding: var(--spacing-sm) 0;
     box-shadow: var(--shadow-md);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     overflow: hidden;
     width: 100%;
 }
@@ -205,6 +209,7 @@ body {
 /* Conteúdo Principal */
 .site-main {
     padding: var(--spacing-lg) 0;
+    margin-top: 80px;
 }
 
 .section-title {
