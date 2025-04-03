@@ -88,4 +88,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Iniciar o carrossel
         startSlideShow();
     }
+});
+
+// Função para o balão de fala do Jerivaldo
+document.addEventListener('DOMContentLoaded', function() {
+    const mascote = document.querySelector('.mascote');
+    const speechBubble = document.querySelector('.speech-bubble');
+    let isBubbleVisible = false;
+
+    mascote.addEventListener('click', function() {
+        isBubbleVisible = !isBubbleVisible;
+        speechBubble.classList.toggle('show', isBubbleVisible);
+    });
+
+    // Fechar o balão ao clicar fora
+    document.addEventListener('click', function(event) {
+        if (isBubbleVisible && !mascote.contains(event.target) && !speechBubble.contains(event.target)) {
+            isBubbleVisible = false;
+            speechBubble.classList.remove('show');
+        }
+    });
 }); 

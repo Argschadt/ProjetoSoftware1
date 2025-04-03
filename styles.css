@@ -1318,6 +1318,47 @@ body {
     transform: scale(1.1);
 }
 
+.speech-bubble {
+    position: absolute;
+    bottom: 120px;
+    right: 0;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    width: 90vw;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+    z-index: 1001;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: var(--color-white) transparent transparent;
+}
+
+.speech-bubble p {
+    margin: 0 0 15px 0;
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    max-width: 100%;
+}
+
+.speech-bubble p:last-child {
+    margin-bottom: 0;
+}
+
+.speech-bubble.show {
+    display: block;
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -1335,5 +1376,15 @@ body {
     
     .mascote {
         width: 80px;
+    }
+
+    .speech-bubble {
+        max-width: 90vw;
+        bottom: 100px;
+        padding: 15px;
+    }
+
+    .speech-bubble p {
+        font-size: 1rem;
     }
 }
