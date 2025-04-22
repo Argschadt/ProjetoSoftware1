@@ -147,4 +147,50 @@ document.addEventListener('DOMContentLoaded', function() {
             body.style.overflow = 'auto';
         });
     });
-}); 
+});
+
+// Preload de imagens da galeria
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar se estamos na página da galeria
+    if (window.location.pathname.includes('galeria.html')) {
+        // Função para precarregar as imagens de galeria
+        function preloadGalleryImages() {
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            
+            // Para cada imagem na galeria
+            galleryItems.forEach(img => {
+                // Criar um novo objeto Image para precarregar
+                const preloadImage = new Image();
+                
+                // Quando a imagem carrega, adicionar uma classe para uma transição suave
+                preloadImage.onload = function() {
+                    img.classList.add('loaded');
+                };
+                
+                // Iniciar o carregamento da imagem
+                preloadImage.src = img.src;
+            });
+        }
+        
+        // Executar o preload após um pequeno delay para não competir com recursos críticos
+        setTimeout(preloadGalleryImages, 1000);
+        
+        // Adicionar lazy-loading observer para carregar imagens apenas quando visíveis
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // Quando a imagem entra no viewport
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    }
+});
