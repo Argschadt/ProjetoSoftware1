@@ -363,7 +363,8 @@ body {
 }
 
 .intro-section,
-.cta-section {
+.cta-section,
+.sidebar-info {
     animation: fadeIn 0.5s ease-out forwards;
 }
 
