@@ -44,6 +44,9 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+      // Claim clients so the service worker is in control immediately
+      return self.clients.claim();
     })
   );
 });

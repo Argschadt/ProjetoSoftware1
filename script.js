@@ -94,59 +94,67 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const mascote = document.querySelector('.mascote');
     const speechBubble = document.querySelector('.speech-bubble');
-    let isBubbleVisible = false;
+    
+    // Verifica se os elementos existem antes de adicionar event listeners
+    if (mascote && speechBubble) {
+        let isBubbleVisible = false;
 
-    mascote.addEventListener('click', function() {
-        isBubbleVisible = !isBubbleVisible;
-        speechBubble.classList.toggle('show', isBubbleVisible);
-    });
+        mascote.addEventListener('click', function() {
+            isBubbleVisible = !isBubbleVisible;
+            speechBubble.classList.toggle('show', isBubbleVisible);
+        });
 
-    // Fechar o balão ao clicar fora
-    document.addEventListener('click', function(event) {
-        if (isBubbleVisible && !mascote.contains(event.target) && !speechBubble.contains(event.target)) {
-            isBubbleVisible = false;
-            speechBubble.classList.remove('show');
-        }
-    });
+        // Fechar o balão ao clicar fora
+        document.addEventListener('click', function(event) {
+            if (isBubbleVisible && !mascote.contains(event.target) && !speechBubble.contains(event.target)) {
+                isBubbleVisible = false;
+                speechBubble.classList.remove('show');
+            }
+        });
+    }
 });
 
 // Menu Mobile
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.querySelector('.main-nav');
-    const body = document.body;
+    
+    // Verifica se os elementos existem antes de prosseguir
+    if (menuToggle && mainNav) {
+        const body = document.body;
 
-    // Criar overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    body.appendChild(overlay);
+        // Criar overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        body.appendChild(overlay);
 
-    menuToggle.addEventListener('click', function() {
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
-        mainNav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.style.overflow = isExpanded ? 'auto' : 'hidden';
-    });
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = isExpanded ? 'auto' : 'hidden';
+        });
 
-    // Fechar menu ao clicar no overlay
-    overlay.addEventListener('click', function() {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        mainNav.classList.remove('active');
-        overlay.classList.remove('active');
-        body.style.overflow = 'auto';
-    });
-
-    // Fechar menu ao clicar em um link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        // Fechar menu ao clicar no overlay
+        overlay.addEventListener('click', function() {
             menuToggle.setAttribute('aria-expanded', 'false');
             mainNav.classList.remove('active');
             overlay.classList.remove('active');
             body.style.overflow = 'auto';
         });
-    });
+
+        // Fechar menu ao clicar em um link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = 'auto';
+            });
+        });
+    }
 });
 
 // Preload de imagens da galeria
