@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detalhes sobre o Quero-quero (Vanellus chilensis) no Jardim Botânico">
-    <title>Quero-quero - Jardim Botânico</title>
+    <meta name="description" content="Detalhes da espécie no Jardim Botânico">
+    <title>Detalhes da Espécie - Jardim Botânico</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="imagens/logo.jpg">
@@ -48,37 +48,8 @@
         <main class="site-main">
             <div class="container">
                 <section class="especie-detalhes">
-                    <div class="especie-header">
-                        <h2 class="section-title">Quero-quero</h2>
-                        <p class="nome-cientifico"><em>Vanellus chilensis</em></p>
-                    </div>
-
-                    <div class="especie-content">
-                        <div class="especie-imagem-container">
-                            <img src="imagens/individuos/Vanellus-chilensis.jpg" alt="Quero-quero" class="especie-imagem">
-                        </div>
-
-                        <div class="especie-info">
-                            <div class="info-card">
-                                <h3 class="info-title">Características</h3>
-                                <p class="info-text">Ave de médio porte com plumagem cinza e branca, crista preta e pernas longas. Possui esporões nas asas que usa para defesa.</p>
-                            </div>
-
-                            <div class="info-card">
-                                <h3 class="info-title">Distribuição</h3>
-                                <p class="info-text">Encontrado em todo o Brasil, especialmente em áreas abertas como campos, pastagens e áreas urbanas.</p>
-                            </div>
-
-                            <div class="info-card">
-                                <h3 class="info-title">Hábitos</h3>
-                                <p class="info-text">Conhecido por seu canto característico "quero-quero". É territorial e protege agressivamente seu ninho e filhotes.</p>
-                            </div>
-
-                            <div class="info-card">
-                                <h3 class="info-title">Status de Conservação</h3>
-                                <p class="info-text">Não ameaçado de extinção, sendo uma espécie comum e bem adaptada a ambientes alterados pelo homem.</p>
-                            </div>
-                        </div>
+                    <div id="species-content">
+                        <div class="loading-spinner">Carregando...</div>
                     </div>
 
                     <div class="voltar-container">
@@ -98,6 +69,59 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the species ID from the URL query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const speciesId = urlParams.get('id');
+            
+            if (!speciesId) {
+                document.getElementById('species-content').innerHTML = '<p>Espécie não encontrada.</p>';
+                return;
+            }
+            
+            // Fetch the species data
+            fetch(`http://127.0.0.1:5000/get_species`)
+                .then(response => response.json())
+                .then(allSpecies => {
+                    const species = allSpecies.find(s => s.id == speciesId);
+                    
+                    if (!species) {
+                        document.getElementById('species-content').innerHTML = '<p>Espécie não encontrada.</p>';
+                        return;
+                    }
+                    
+                    // Update the page title
+                    document.title = `${species.name} - Jardim Botânico`;
+                    
+                    // Populate the species details
+                    const content = `
+                        <div class="especie-header">
+                            <h2 class="section-title">${species.name}</h2>
+                            <p class="nome-cientifico"><em>${species.scientific_name}</em></p>
+                        </div>
+
+                        <div class="especie-content">
+                            <div class="especie-imagem-container">
+                                <img src="${species.image_path}" alt="${species.name}" class="especie-imagem">
+                            </div>
+
+                            <div class="especie-info">
+                                <div class="info-card">
+                                    <h3 class="info-title">Descrição</h3>
+                                    <p class="info-text">${species.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.getElementById('species-content').innerHTML = content;
+                })
+                .catch(error => {
+                    console.error('Error loading species details:', error);
+                    document.getElementById('species-content').innerHTML = '<p>Erro ao carregar detalhes da espécie. Por favor, tente novamente mais tarde.</p>';
+                });
+        });
+    </script>
 </body>
 </html>

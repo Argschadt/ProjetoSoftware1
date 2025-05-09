@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Flor-Teste",
+        "scientific_name": "Floris testis",
+        "description": "Teste de Flor",
+        "image_path": "imagens/individuos/floris-testis.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Quero-Quero",
+        "scientific_name": "Vanellus chilensis",
+        "description": "Quero quero, agressivo",
+        "image_path": "imagens/individuos/vanellus-chilensis.jpg"
+    }
+]
